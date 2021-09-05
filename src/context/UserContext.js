@@ -7,8 +7,7 @@ export const UserProvider = (props) => {
     const [users, setUsers] = React.useState({});
     const [points, setPoints] = React.useState(0);
     const [history, setHistory] = React.useState(false);
-    const [ record, setRecord] = React.useState([]);
-
+    const [record, setRecord] = React.useState([]);
 
     React.useEffect(() => {
         getUser().then(e => {setUsers(e); setPoints(e.points); setRecord(e.redeemHistory)});
@@ -20,3 +19,5 @@ export const UserProvider = (props) => {
         </userContext.Provider>
     );
 }
+
+export default userContext

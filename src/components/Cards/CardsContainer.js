@@ -3,7 +3,7 @@ import Cards from './Cards'
 import getProducts from '../../actions/getProducts'
 import useCustomPagination from '../../customHooks/useCustomPagination'
 import { LIMIT } from '../../constants/constants'
-import { userContext } from '../../context/userContext';
+import { userContext } from '../../context/UserContext';
 import './Cards.css'
 import ButtonFilter from '../ButtonFilter/ButtonFilter'
 
@@ -11,7 +11,7 @@ import ButtonFilter from '../ButtonFilter/ButtonFilter'
 const CardsContainer = () => {
     const [products, setProducts] = React.useState([]);
     const [sortData, setSortData] = React.useState("recent");
-    const { history } = React.useContext(userContext)
+    // const { history } = React.useContext(userContext)
 
     React.useEffect(() => {
       getProducts().then(e => setProducts(e));
