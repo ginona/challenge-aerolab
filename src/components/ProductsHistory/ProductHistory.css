@@ -1,0 +1,201 @@
+
+table {
+    background: #f5f5f5;
+    border-collapse: separate;
+    box-shadow: inset 0 1px 0 #fff;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 30px auto;
+    text-align: left;
+    width: 800px;
+  } 
+  
+  th {
+    background: linear-gradient(rgb(18, 165, 209), rgb(8, 81, 104));
+    border-left: 1px solid rgb(21, 152, 228);
+    border-right: 1px solid rgb(21, 152, 228);
+    border-top: 1px solid rgb(21, 152, 228);
+    border-bottom: 1px solid rgb(21, 152, 228);
+    box-shadow: inset 0 1px 0 rgb(159, 218, 245);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: relative;
+    text-shadow: 0 1px 0 #000;  
+  }
+  
+  th:after {
+    background: linear-gradient(rgba(11, 165, 204, 0), rgba(255,255,255,.08));
+    content: '';
+    display: block;
+    height: 25%;
+    left: 0;
+    margin: 1px 0 0 0;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+  }
+  
+  th:first-child {
+    border-left: 1px solid #777;  
+    box-shadow: inset 1px 1px 0 #999;
+  }
+  
+  th:last-child {
+    box-shadow: inset -1px 1px 0 #999;
+  }
+  
+  td {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #e8e8e8;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 300ms;
+  }
+  
+  td:first-child {
+    box-shadow: inset 1px 0 0 #fff;
+  } 
+  
+  td:last-child {
+    border-right: 1px solid #e8e8e8;
+    box-shadow: inset -1px 0 0 #fff;
+  } 
+
+  
+  tr:last-of-type td {
+    box-shadow: inset 0 -1px 0 #fff; 
+  }
+  
+  tr:last-of-type td:first-child {
+    box-shadow: inset 1px -1px 0 #fff;
+  } 
+  
+  tr:last-of-type td:last-child {
+    box-shadow: inset -1px -1px 0 #fff;
+  } 
+  
+  tbody:hover td {
+    color: transparent;
+    text-shadow: 0 0 3px #aaa;
+  }
+  
+  tbody:hover tr:hover td {
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+  }
+
+
+  .btnPaginationLeft {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    border: solid 6px #1598e4;
+    border-radius: 100%;
+    z-index: 1;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  
+  .btnPaginationLeft:before, .btnPaginationLeft:after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 10%;
+    top: 33%;
+    right: 55%;
+    background: #1598e4;
+    z-index: 2;
+    -webkit-transform: translate(50%, 50%) rotate(-45deg);
+            transform: translate(50%, 50%) rotate(-45deg);
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  
+  .btnPaginationLeft:after {
+    z-index: 3;
+    top: 54%;
+    right: 55%;
+    -webkit-transform: translate(50%, 50%) rotate(45deg);
+            transform: translate(50%, 50%) rotate(45deg);
+  }
+  
+  .btnPaginationLeft:hover {
+    border: solid 8px #127ab6;
+  }
+  
+  .btnPaginationLeft:hover:after, .btnPaginationLeft:hover:before {
+    background: #127ab6;
+  }
+  
+  .btnPaginationLeft:active {
+    border: solid 8px #02032c;
+  }
+  
+  .btnPaginationLeft:active:after, .btnPaginationLeft:active:before {
+    background: #02032c;
+  }
+  
+  .buttonsPagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btnPaginationRight {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    border: solid 6px #1598e4;
+    border-radius: 100%;
+    z-index: 1;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  
+  .btnPaginationRight:before, .btnPaginationRight:after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 10%;
+    top: 41%;
+    left: 55%;
+    background: #1598e4;
+    z-index: 2;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  
+  .btnPaginationRight:after {
+    z-index: 3;
+    top: 59%;
+    left: 55%;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  .btnPaginationRight:hover {
+    border: solid 8px #127ab6;
+  }
+  
+  .btnPaginationRight:hover:after, .btnPaginationRight:hover:before {
+    background: #127ab6;
+  }
+  
+  .btnPaginationRight:active {
+    border: solid 8px #02032c;
+  }
+  
+  .btnPaginationRight:active:after, .btnPaginationRight:active:before {
+    background: #02032c;
+  }

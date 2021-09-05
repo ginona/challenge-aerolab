@@ -1,7 +1,14 @@
 import React from 'react'
 import getUser from '../actions/getUser'
 
-export const userContext = React.createContext();
+const defaultState = {
+    users: {},
+    points: 0,
+    history: false,
+    record: []
+  }
+
+export const userContext = React.createContext(defaultState);
 
 export const UserProvider = (props) => {
     const [users, setUsers] = React.useState({});
@@ -19,5 +26,3 @@ export const UserProvider = (props) => {
         </userContext.Provider>
     );
 }
-
-export default userContext

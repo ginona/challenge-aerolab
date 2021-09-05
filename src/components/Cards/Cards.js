@@ -9,7 +9,7 @@ function Cards(props) {
     
     const [hovered, isHovered] = useState(false)
     const [successRedeem, setSuccessRedeem] = useState("")
-    const { points, setPoints, users } = React.useContext(userContext)
+    const { points, setPoints } = React.useContext(userContext)
     const [modal, setModal] = React.useState(false)
 
     const handleRedeem = (id, cost) => {
@@ -31,7 +31,6 @@ function Cards(props) {
             </div> : null }
             <div className="center">
                 <div>
-                    {users.name}
                     <img src={props.img.url} className={hovered ? "img-hovered card-img-top" : "card-img-top"} alt={props.name}/>
                 </div>
                 <button type="button" className="button-one" disabled={ props.cost > points }  onClick={() => {handleRedeem(props._id, props.cost); setModal(true)}}>Redeem now</button>

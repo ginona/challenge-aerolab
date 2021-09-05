@@ -1,22 +1,31 @@
 import React from "react"
-// import AddCoins from "../CoinsModal/CoinsModal"
+import CoinsModal from "../CoinsModal/CoinsModal"
+import coin from '../../assets/coin.svg'
 import { userContext } from '../../context/UserContext';
 import logo from "../../assets/aerolab-logo.svg"
 import './Header.css'
 
 function Header() {
 
-    // const [modal, setModal] = React.useState(false)
-    const { users } = React.useContext(userContext)
+    const [modal, setModal] = React.useState(false)
+    const { setHistory } = React.useContext(userContext)
 
     return (
-        <header className="header">
-            {}
-            <img className="logo" src={logo} alt="logo"/>
-            <ul class="menu">
-                <li><a href="#episodios">Gino</a></li>
-                <li><a href="#dondeVenimos">Nosotros</a></li>
-            </ul>
+        <header>
+            <div  className="header">
+            <img className="logo" src={logo} onClick={() => setHistory(false)} alt="logo"/>
+            <div className="userNameInfo">
+            <h6 className="userName" onClick={() => setHistory(true)}> Testing Name </h6>
+            <button className="button-header-coins" onClick = {() => setModal(true)} > 
+                1300
+                <img src={coin} alt="coin"/>
+            </button>
+            </div>
+            </div>
+            { modal ? <CoinsModal setModal={setModal} /> : null }
+            <div className="container-header">
+                <h6 className="title-header"> Electronics </h6>
+            </div>
         </header>
     )
 }

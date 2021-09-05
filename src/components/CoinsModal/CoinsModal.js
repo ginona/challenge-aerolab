@@ -29,7 +29,7 @@ function CoinsModal(props) {
     }
     
     return (
-        <section className="popup">
+        <section id="popup1" class="overlay">
             {/* <div className="addCoins">
                 <div>
                     {show && 
@@ -53,12 +53,12 @@ function CoinsModal(props) {
                 </button>
                 <button className="close" onClick={() => props.setModal(false)}> X </button>
             </div> */}
-                <div id="popup1" class="overlay">
+                <div className="popup">
                 <h2>Add more coins</h2>
-                <div class="add-coins">
-                    <button class="button-add-coins" onClick={() => handleClick(MIN)}><img src={coin} alt={MIN} /> {MIN}</button>
-                    <button class="button-add-coins" onClick={() => handleClick(MED)}><img src={coin} alt={MED} /> {MED}</button>
-                    <button class="button-add-coins" onClick={() => handleClick(MAX)}><img src={coin} alt={MAX} /> {MAX}</button>
+                <div className="add-coins">
+                    <button className="button-add-coins" onClick={() => handleClick(MIN)}><img src={coin} alt={MIN} /> {MIN}</button>
+                    <button className="button-add-coins" onClick={() => handleClick(MED)}><img src={coin} alt={MED} /> {MED}</button>
+                    <button className="button-add-coins" onClick={() => handleClick(MAX)}><img src={coin} alt={MAX} /> {MAX}</button>
                     <button className="close" onClick={() => props.setModal(false)}> X </button>
                 </div>
             </div>

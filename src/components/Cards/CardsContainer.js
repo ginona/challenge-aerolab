@@ -11,7 +11,7 @@ import ButtonFilter from '../ButtonFilter/ButtonFilter'
 const CardsContainer = () => {
     const [products, setProducts] = React.useState([]);
     const [sortData, setSortData] = React.useState("recent");
-    // const { history } = React.useContext(userContext)
+    const { history } = React.useContext(userContext)
 
     React.useEffect(() => {
       getProducts().then(e => setProducts(e));
@@ -31,7 +31,7 @@ const CardsContainer = () => {
     const { currentArray, next, prev, maxPage, currentPage } = useCustomPagination(renderSwitch(), LIMIT);
 
     return (
-        <section>
+        <section style={{display: history ? "none" : "block"}}>
             <section className="filters">
                 <div>Sort by:</div>
                 <div>
