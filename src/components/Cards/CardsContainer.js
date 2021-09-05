@@ -33,15 +33,21 @@ const CardsContainer = () => {
     return (
         <section>
             <section className="filters">
-                <ButtonFilter setSortData={setSortData} filter="recent" message="Most recent"/>
-                <ButtonFilter setSortData={setSortData} filter="lowPrice" message="Lowest price"/>
-                <ButtonFilter setSortData={setSortData} filter="highPrice" message="Highest price"/>
+                <div>Sort by:</div>
+                <div>
+                    <ButtonFilter setSortData={setSortData} filter="recent" message="Most recent"/>
+                    <ButtonFilter setSortData={setSortData} filter="lowPrice" message="Lowest price"/>
+                    <ButtonFilter setSortData={setSortData} filter="highPrice" message="Highest price"/>
+                </div>
             </section>
             <section className="container-cards">
             { currentArray }
             </section>
             <section className="buttonsPagination">
                 <button className="btnPaginationLeft" onClick={() => prev()} disabled={ currentPage <= 1 }></button>
+                <div className="div-filter">
+                {"Page " + currentPage + " of " + maxPage}
+                </div>
                 <button className="btnPaginationRight" onClick={() => next()} disabled={ currentPage >= maxPage }></button>
             </section>
         </section>

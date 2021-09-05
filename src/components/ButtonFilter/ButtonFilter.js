@@ -3,7 +3,7 @@ import './ButtonFilter.css'
 
 const ButtonFilter = (props) => {
     return (
-            <button className="btnFilter" onClick={() => props.setSortData(props.filter)}>{props.message}</button>
+            <button className="btn-filter" onClick={() => props.setSortData(props.filter)}>{props.message}</button>
     )
 }
 
