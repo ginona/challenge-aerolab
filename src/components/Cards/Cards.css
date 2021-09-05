@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+*   {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    padding: 1em;
+    margin: 2em;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px -2px #c8c8c8;
+}
+.card:hover{
+    box-shadow: 10px 3px 5px 0px #919191ed;
+    background: linear-gradient(0deg, #0ad4fa 0%, rgba(254,254,254,0.35057773109243695) 29%, rgba(255,255,255,1) 100%);
+    /* z-index: 1000; */
+    border: #0ad4fa;
+    opacity: 1;
+}
+
+.center{
+    text-align: center;
+}
+
+.button-one {
+    background-color: #0ad4fa;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  .button-one:hover {
+      opacity: 1
+    }
+
+/* Hoovered */
+   .card-hovered{
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .img-hovered{
+        opacity: 0.6
+    }
+    
+    .card-cost{
+        margin-left: 0.3em;
+        margin-top: 0.5em;
+        font-size: 17px;
+    }
+    
+    .buttons-card-hovered{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .btn-dark{
+        border-radius: 25px;
+        font-size: larger;
+        background: #0ad4fa;
+        border: 1px solid #0ad4fa
+    }
+    
+    .card-img-top:hover{
+        background-color: #0ad4fa;
+    }
+    
+    .coin{
+        margin-left: 0.4em;
+        margin-bottom: 3em;
+    }
+
+    .buy{
+        margin-top: 0.2em;
+        width: 1.5em;
+        height: 1.5em;
+    }
