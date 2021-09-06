@@ -30,6 +30,6 @@ You will also see any lint errors in the console.
 
 **Gino Nacchio**
 
-- [Profile](https://github.com/rohit19060 "Gino Nacchio")
+- [Profile](https://github.com/ginona "Gino Nacchio")
 - [Email](mailto:ginonacchio94@gmail.com?subject=Hi "Hey!")
 - [LinkedIn](https://www.linkedin.com/in/ginonacchio/)
