@@ -1,5 +1,6 @@
 import React from 'react'
 import './Message.css'
+
 const MESSAGE = "You've redeem the product successfully"
 const SUCCESS = "alert color-success"
 const ERROR = "alert color-error"

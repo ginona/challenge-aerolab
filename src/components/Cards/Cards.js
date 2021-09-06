@@ -1,19 +1,16 @@
 import React, {useState} from "react"
-import { userContext } from '../../context/userContext';
 import coin from "../../assets/coin.svg"
 import buy from '../../assets/buy-blue.svg'
 import postRedeem from '../../actions/postRedeem'
 import Message from '../Message/Message'
 
 function Cards(props) {
-    
     const [hovered, isHovered] = useState(false)
     const [successRedeem, setSuccessRedeem] = useState("")
-    const { points, setPoints } = React.useContext(userContext)
     const [modal, setModal] = React.useState(false)
 
     const handleRedeem = (id, cost) => {
-        postRedeem(id).then(response => { setSuccessRedeem(response.message); setPoints(points <= 0 ? 0 : points - cost) });
+        postRedeem(id).then(response => { setSuccessRedeem(response.message); props.setPoints(props.points <= 0 ? 0 : props.points - cost) });
     }
     
     return (
@@ -25,7 +22,7 @@ function Cards(props) {
             <div className="card-hovered"> 
                 <div className="buttons-card-hovered"> 
                     <img className="buy" src={buy} alt="buy"/>
-                    <h5 className="card-cost"> { props.cost <= points ? props.cost : "You need " + (props.cost - points)} </h5> 
+                    <h5 className="card-cost"> { props.cost <= props.points ? props.cost : "You need " + (props.cost - props.points)} </h5> 
                     <img className="coin" src={coin} alt="coin"/>  
                 </div>
             </div> : null }
@@ -33,7 +30,7 @@ function Cards(props) {
                 <div>
                     <img src={props.img.url} className={hovered ? "img-hovered card-img-top" : "card-img-top"} alt={props.name}/>
                 </div>
-                <button type="button" className="button-one" disabled={ props.cost > points }  onClick={() => {handleRedeem(props._id, props.cost); setModal(true)}}>Redeem now</button>
+                <button type="button" className="button-one" disabled={ props.cost > props.points } onClick={() => {handleRedeem(props._id, props.cost); setModal(true)}}>Redeem now</button>
             </div>
             <div>
                 <div className="card-category">{props.category}</div>

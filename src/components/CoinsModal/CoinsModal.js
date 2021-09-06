@@ -1,9 +1,9 @@
 import React from "react"
+import './CoinsModal.css'
 import { userContext } from '../../context/UserContext'
 import coin from "../../assets/coin.svg"
 import postCoins from "../../actions/postCoins"
 import { MIN, MED, MAX} from "../../constants/constants"
-import './CoinsModal.css'
 
 function CoinsModal(props) {
     const [show, setShow] = React.useState(false);

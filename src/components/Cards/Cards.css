@@ -27,7 +27,7 @@
 }
 
 .button-one {
-    background-color: #0ad4fa;
+    background-color: rgb(58, 173, 240);
     border: none;
     color: white;
     padding: 16px 32px;
@@ -41,11 +41,17 @@
     cursor: pointer;
     border-radius: 20px;
     z-index: 10000000;
+    font-weight: 500;
   }
 
   .button-one:hover {
       opacity: 1
     }
+  .button-one:disabled {
+    background-color: #a5a5a5;
+    opacity: 1;
+    cursor: auto;
+  }
 
 /* Hoovered */
    .card-hovered{
@@ -130,7 +136,7 @@
         margin: 20px;
         width: 50px;
         height: 50px;
-        border: solid 6px #1598e4;
+        border: solid 6px rgb(58, 173, 240);
         border-radius: 100%;
         z-index: 1;
         -webkit-transition: all 0.2s linear;
@@ -146,8 +152,7 @@
         right: 55%;
         background: #1598e4;
         z-index: 2;
-        -webkit-transform: translate(50%, 50%) rotate(-45deg);
-                transform: translate(50%, 50%) rotate(-45deg);
+        transform: translate(50%, 50%) rotate(-45deg);
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear;
       }
@@ -156,8 +161,7 @@
         z-index: 3;
         top: 54%;
         right: 55%;
-        -webkit-transform: translate(50%, 50%) rotate(45deg);
-                transform: translate(50%, 50%) rotate(45deg);
+        transform: translate(50%, 50%) rotate(45deg);
       }
       
       .btnPaginationLeft:hover {
@@ -189,7 +193,7 @@
         margin: 20px;
         width: 50px;
         height: 50px;
-        border: solid 6px #1598e4;
+        border: solid 6px rgb(58, 173, 240);
         border-radius: 100%;
         z-index: 1;
         -webkit-transition: all 0.2s linear;
@@ -205,8 +209,7 @@
         left: 55%;
         background: #1598e4;
         z-index: 2;
-        -webkit-transform: translate(-50%, -50%) rotate(45deg);
-                transform: translate(-50%, -50%) rotate(45deg);
+        transform: translate(-50%, -50%) rotate(45deg);
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear;
       }
@@ -215,8 +218,7 @@
         z-index: 3;
         top: 59%;
         left: 55%;
-        -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-                transform: translate(-50%, -50%) rotate(-45deg);
+        transform: translate(-50%, -50%) rotate(-45deg);
       }
       
       .btnPaginationRight:hover {

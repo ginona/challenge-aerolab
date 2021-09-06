@@ -1,17 +1,16 @@
 import React from 'react'
 import './Cards.css'
-import { userContext } from '../../context/UserContext';
 import Cards from './Cards'
+import { userContext } from '../../context/UserContext';
 import getProducts from '../../actions/getProducts'
 import useCustomPagination from '../../customHooks/useCustomPagination'
 import { LIMIT } from '../../constants/constants'
 import ButtonFilter from '../ButtonFilter/ButtonFilter'
 
-
 const CardsContainer = () => {
     const [products, setProducts] = React.useState([]);
     const [sortData, setSortData] = React.useState("recent");
-    const { history } = React.useContext(userContext)
+    const { points, setPoints, history } = React.useContext(userContext)
 
     React.useEffect(() => {
       getProducts().then(e => setProducts(e));
@@ -20,11 +19,11 @@ const CardsContainer = () => {
     const renderSwitch = () =>{
         switch(sortData){
             case "lowPrice":
-                return products.sort((a,b) => parseFloat(a.cost) - parseFloat(b.cost)).map((data, id) => <Cards key={id} {...data} />);
+                return products.sort((a,b) => parseFloat(a.cost) - parseFloat(b.cost)).map((data, id) => <Cards points={points} setPoints={setPoints} key={id} {...data} />);
             case "highPrice":
-                return products.sort((a,b) => parseFloat(b.cost) - parseFloat(a.cost)).map((data, id) => <Cards key={id} {...data} />);
+                return products.sort((a,b) => parseFloat(b.cost) - parseFloat(a.cost)).map((data, id) => <Cards points={points} setPoints={setPoints} key={id} {...data} />);
             default:
-                return products.sort((a,b) => (a._id < b._id ? -1 : 1)).map((data, id) => <Cards key={id} {...data} />)
+                return products.sort((a,b) => (a._id < b._id ? -1 : 1)).map((data, id) => <Cards points={points} setPoints={setPoints} key={id} {...data} />)
         }
     }
 
