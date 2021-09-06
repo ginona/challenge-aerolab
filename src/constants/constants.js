@@ -1,6 +1,6 @@
 export const headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDE5ZGUyMjdlNzE4NzAwMjBlMzhlZjEiLCJpYXQiOjE2MTIzMDgwMDJ9.kOkXT5Qd6PfX2JsSMTpUwj4XMnnfs9lDKgb7GHI41i0"
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTMxMGJlOGE5MDUzOTAwMjFiNzBiMjEiLCJpYXQiOjE2MzA2MDQyNjR9.fMtktwSSif-MrK3iruAp7Z_IOyhqKX0YLtvJf8konpc"
 };
 
 export const URL_GETUSER = "https://coding-challenge-api.aerolab.co/user/me";
