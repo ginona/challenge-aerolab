@@ -30,7 +30,7 @@ function CoinsModal(props) {
     
     return (
         <section className="overlay">
-                <div className="popup">
+            <div className="popup">
                 <h2>Add more coins</h2>
                 <div className="add-coins">
                     <button className="button-add-coins" onClick={() => handleClick(MIN)}><img src={coin} alt={MIN} /> {MIN}</button>
@@ -38,6 +38,13 @@ function CoinsModal(props) {
                     <button className="button-add-coins" onClick={() => handleClick(MAX)}><img src={coin} alt={MAX} /> {MAX}</button>
                     <button className="close" onClick={() => props.setModal(false)}> X </button>
                 </div>
+                {show && 
+                <div className="flex">
+                    <div className={response === 'Points Updated' ? "success-enabled success-add-points color-add-points-success" : "success-enabled success-add-points color-add-points-error"}> 
+                    <h6 > {response} </h6>
+                </div>
+                </div>
+                }
             </div>
         </section>
     )

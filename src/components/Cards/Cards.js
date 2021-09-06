@@ -9,6 +9,11 @@ function Cards(props) {
     const [successRedeem, setSuccessRedeem] = useState("")
     const [modal, setModal] = React.useState(false)
 
+    React.useEffect(() => {
+        if(modal) 
+            setTimeout(() => { setModal(false) }, 3000)
+    },[modal])
+
     const handleRedeem = (id, cost) => {
         postRedeem(id).then(response => { setSuccessRedeem(response.message); props.setPoints(props.points <= 0 ? 0 : props.points - cost) });
     }

@@ -10,25 +10,23 @@ const ProductsHistory = () => {
 
     return (
         <div style={{display: history ? "block" : "none"}}>
-            <table>
-                    <thead>
-                        <tr>
-                            <th> Product Id </th>
-                            <th> Product Name </th>
-                            <th> Product Cost </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            currentArray.map((item, i) => 
-                                <tr key={item.productId + i}>
-                                    <td>{item.productId}</td>
-                                    <td>{item.name}</td>
-                                    <td>{item.cost}</td>
-                                </tr>
-                            )
-                        }
-                    </tbody>
+              <table class="rwd-table">
+                <tbody>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product Cost</th>
+                    </tr>
+                    {currentArray.map((item, i) => 
+                    <tr key={item.productId + i}>
+                        <td data-th="Product Name">
+                        {item.name}
+                        </td>
+                        <td data-th="Product Cost">
+                        {item.cost}
+                        </td>
+                    </tr>)
+                    }
+                </tbody>
             </table>
             <section className="buttonsPagination">
                 <button className="btnPaginationLeft" onClick={() => prev()} disabled={ currentPage <= 1 }></button>

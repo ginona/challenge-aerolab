@@ -106,3 +106,13 @@
 .logo{
   cursor: pointer;
 }
+
+@media screen and (max-width: 700px){
+  .container-header{
+    padding-top: 100px;
+  }
+  
+  .title-header{
+    font-size: 3em;
+  }
+}
