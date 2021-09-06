@@ -1,10 +1,10 @@
 import React from 'react'
+import './Cards.css'
+import { userContext } from '../../context/UserContext';
 import Cards from './Cards'
 import getProducts from '../../actions/getProducts'
 import useCustomPagination from '../../customHooks/useCustomPagination'
 import { LIMIT } from '../../constants/constants'
-import { userContext } from '../../context/UserContext';
-import './Cards.css'
 import ButtonFilter from '../ButtonFilter/ButtonFilter'
 
 

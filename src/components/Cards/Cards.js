@@ -1,8 +1,8 @@
 import React, {useState} from "react"
+import { userContext } from '../../context/userContext';
 import coin from "../../assets/coin.svg"
 import buy from '../../assets/buy-blue.svg'
 import postRedeem from '../../actions/postRedeem'
-import { userContext } from '../../context/userContext';
 import Message from '../Message/Message'
 
 function Cards(props) {

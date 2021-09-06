@@ -1,4 +1,5 @@
 import React from 'react'
+import './ProductHistory.css'
 import { userContext } from '../../context/UserContext';
 import { LIMIT } from '../../constants/constants'
 import useCustomPagination from '../../customHooks/useCustomPagination'

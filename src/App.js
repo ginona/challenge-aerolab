@@ -1,8 +1,7 @@
-import React from 'react';
 import Header from './components/Header/Header'
+import { UserProvider } from './context/UserContext'
 import CardsContainer from './components/Cards/CardsContainer'
-import ProductsHistory from './components/ProductsHistory/ProductHistory';
-import { UserProvider } from './context/userContext'
+import ProductsHistory from './components/ProductsHistory/ProductHistory'
 
 function App() {
 
