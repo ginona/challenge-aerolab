@@ -9,7 +9,7 @@ const ProductsHistory = () => {
     const { currentArray, next, prev, maxPage, currentPage } = useCustomPagination(record, LIMIT);
 
     return (
-        <div style={{display: history ? "block" : "none"}}>
+        <section style={{display: history ? "block" : "none"}}>
               <table class="rwd-table">
                 <tbody>
                     <tr>
@@ -35,7 +35,7 @@ const ProductsHistory = () => {
                 </div>
                 <button className="btnPaginationRight" onClick={() => next()} disabled={ currentPage >= maxPage }></button>
             </section>
-        </div>
+        </section>
     );
 }
 
