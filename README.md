@@ -5,7 +5,7 @@
 
 ## Deployed app
 
-- [E.commerce - Click me!](https://challenge-aerolab-ginona.vercel.app/)
+- [E-commerce - Click me!](https://challenge-aerolab-ginona.vercel.app/ "Click me!")
 
 
 ## Links
