@@ -2,6 +2,12 @@
 
 <p align="center">The challenge is to build a catalog view for a loyalty program app. We’ll provide you with the base UI and API, you can use it as provided or you can make any improvements you deem fit. It’s up to you, your imagination and your skills to come up with new solutions and/or interactions between the components.</p>
 
+
+## Deployed app
+
+- [E.commerce - Click me!](https://challenge-aerolab-ginona.vercel.app/)
+
+
 ## Links
 
 - [API](https://aerolabchallenge.docs.apiary.io/ "API")
